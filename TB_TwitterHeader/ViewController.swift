@@ -31,14 +31,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         headerImageView = UIImageView(frame: header.bounds)
         headerImageView?.image = UIImage(named: "header_bg")
-        headerImageView?.contentMode = UIViewContentMode.scaleAspectFill
+        headerImageView?.contentMode = .scaleAspectFill
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
         // Header - Blurred Image
         
         headerBlurImageView = UIImageView(frame: header.bounds)
         headerBlurImageView?.image = UIImage(named: "header_bg")?.blurredImage(withRadius: 10, iterations: 20, tintColor: UIColor.clear)
-        headerBlurImageView?.contentMode = UIViewContentMode.scaleAspectFill
+        headerBlurImageView?.contentMode = .scaleAspectFill
         headerBlurImageView?.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
